@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppliMate</title>
+    <style>
+      html {
+        scroll-padding-top: 50px; 
+        scroll-behavior: smooth;
+        }
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+      .navbar{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         
+      }
+      .navbar img{
+        width: 100%;
+        margin-left: 10px;
+      }
+      .menu-list{
+        display: flex;
+        list-style: none;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .menu-list li{
+        margin-right: 50px;
+      }
+      .home img{
+        height: 89vh;
+       
+       
+      }
+        .image-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+        .image-text h1 {
+          font-size: 48px;
+          margin-bottom: 10px;
+        }
+
+        .image-text p {
+          font-size: 24px;
+        }
+        .product{
+          margin-top: 50px;
+         
+          
+        }
+        .product h1{
+          text-align: center;
+          margin: 20px;
+           margin-bottom: 50px;
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }   
+        
+        .product .card-parent{
+         
+          display: flex;
+          justify-content: space-evenly;
+        }
+        .product .card{
+          
+          border: 1px solid;
+          width: 20%;
+          height: 500px;
+          margin-bottom: 100px;
+          border-radius: 10px;
+          overflow: hidden;
+          border-color: gray;
+           box-shadow: 0 8px 30px rgba(0,0,0,0.1),
+                   0 0 15px rgba(0, 0, 0, 0.1);
+        border:1px solid rgba(0, 0, 0, 0.1);
+          
+        }
+        .card .card-image{
+          background-color: white;
+          height: 60%;
+          width: 100%;
+         overflow: hidden;
+        }
+        .card .btn{
+          text-align: center;
+          padding: 1px;
+          
+        }
+        .btn button{
+          background-color: lightblue;
+          padding: 10px;
+          border-radius: 100px;
+          border:20px;
+          color:black;
+          
+        }
+        .card .btn button:hover{
+          transform: scale(1.1);
+        }
+        
+      .card-image img{
+      
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        transition: 1.5s;
+      }
+      .card .card-image img:hover{
+        transform: scale(1.1);
+      }
+      .card h2{
+        text-align: center;
+        margin: 20px;
+      }
+      .p-price{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .service{
+        margin-top: 50px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      
+      .service .p-list{
+        margin-bottom: 20px;
+       
+      }
+      .list{
+        padding: 24px 40px 24px 16px;
+        width:90%;
+        height: 300px;
+        margin: auto;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1),
+                   0 0 15px rgba(0, 0, 0, 0.1);
+        border:1px solid rgba(0, 0, 0, 0.1);
+         margin-bottom: 30px;
+         display: flex;
+         justify-content: space-between;
+         overflow: hidden;
+        transition: 1s;
+      }
+      .list *:hover{
+        transform: none;
+      }
+      .service .list:hover{
+        transform: scale(1.015);
+      }
+      .service .list-img{
+        width: 300px;
+        height: 230px;
+        background-color: aqua;
+        border-radius: 20px;
+        overflow: hidden;
+       margin-top: 5px;
+       margin-bottom: 5px;
+      }
+      .list-img img{
+      
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        
+      }
+      .service h1{
+         margin:auto;
+         text-align:center;
+         margin-bottom: 50px;
+      }
+      .service .title h2{
+        margin-bottom: 20px;
+        margin-top: 10px;
+        color:black;
+        font-size: 23px;
+        text-align: center;
+       
+      }
+      .service .price{
+          margin:left;
+          margin-top: 15px;
+      }
+      .service .price p{
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+      .service .bold{
+        font-size: large;
+        font-weight: 900;
+      }
+       .service  button{
+        background-color: lightblue;
+          padding: 20px;
+          border-radius: 100px;
+          border:20px;
+          color:black;
+           margin-top: 80px;
+
+        
+      }
+       .service  button:hover{
+          transform: scale(1.1);
+        }
+      
+      .about h1{
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 50px; 
+        font-family:Arial, Helvetica, sans-serif
+       
+        
+      }
+      .main{
+        display: flex;
+        margin-bottom: 200px;
+      }
+      .my-vdo{
+                         
+          width: 100%;       
+          max-width: 350px; 
+          height: auto; 
+          margin-left: 80px;   
+          box-shadow: 0 8px 30px rgba(0,0,0,0.1),
+                   0 0 15px rgba(0, 0, 0, 0.1);
+        border:1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        }
+      .main .desc{
+        width: 800px;
+        margin: auto;
+        font-size: 25px;
+        margin-right: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .desc h3{
+        margin-bottom: 20px;
+      }
+      .desc p{
+          margin-bottom: 20px;
+      }
+      .contact{
+        display: flex;
+        background-color:lightblue;
+      }
+      .contact .first{
+        
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        height: 350px;
+      }
+      .first p{
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      .first{
+        padding-top: 30px; 
+        padding-bottom: 20px;
+      }
+     .contact .links{
+      margin-left: 200px;
+      margin-top: 50px;
+     }
+    .links ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .links ul li {
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+    .forms{
+      margin-top: 50px;
+      margin-left: 200px;
+    }
+    .forms h4{
+      margin-bottom: 20px;
+    }
+    .forms input,
+    .forms textarea {
+      width: 48%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+        .forms textarea {
+      height: 60px;
+      resize: none;
+      vertical-align: top;
+    }
+    .forms input.captcha {
+      color: red;
+      font-weight: bold;
+    }
+
+          .forms button {
+      padding: 10px 20px;
+      background-color: #ffc107;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+      .footer {
+        background-color:lightskyblue;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+    </style>
+</head>
+<body>
+ 
+    <div class="navbar">
+        <div>
+            <img src="./images/LOGO.png">  
+          </div>
+        <div>
+            <ul class="menu-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#product">PRODUCTS</a></li>
+                <li><a href="#service">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+    
+ <div class="home">
+    
+        <img width="100%" src="./images/b4.webp">
+            <div class="image-text">
+    <h1>Welcome to AppliMate</h1>
+    <p>Shop Smart. Live Better.</p>
+  </div>
+    
+ </div>
+ <!-- about start -->
+  <section id="about">
+  <div class="about">
+     <h1>About</h1>
+     <div class="main">
+    <div class="vdos">
+ <video class="my-vdo"autoplay muted loop playsinline>
+  <source src="./images/ref.mp4" type="video/mp4">
+  </video>
+</div>
+    <div class="desc">
+     <h3> 🏡 Shop Smart, Live Better...</h3>
+
+<p>Every day begins at home...and the right appliances can make your mornings smoother and your life simpler.</p>
+<p>From brewing your first cup of coffee to preparing a wholesome breakfast, home appliances play a key role in how your day starts. A good appliance should offer efficiency, performance, and reliability,saving you time while adding comfort and ease to your daily routine.
+Don’t let outdated or inefficient appliances slow you down. They take more time, more energy, and make everyday tasks feel like a burden.</p>
+<p>At <b>AppliMate</b>, we bring you carefully selected, high-quality home appliances made with care, technology, and trust.so that every corner of your home works beautifully for you.</p>
+</div>
+    </div>
+
+    
+  </div>
+  </section>
+  <!-- about end -->
+  <!-- produts start -->
+   <section id="product">
+   <div class="product">
+         <h1>PRODUCTS</h1>
+    <div>
+      <div class="card-parent">
+      <div class="card"> 
+        <div class="card-image"><img src="./images/airf.jpg"></div>
+         <div> <h2>Air Fryer</h2> </div>
+         <div class="p-price"><h3>Price:$105 USD</h3></div>
+        <div class="btn">  <button>Buy Now</button> </div>
+        
+      </div>
+
+
+
+      <div class="card">
+                  <div class="card-image"><img src="./images/wash.jpg"></div>
+         <div> <h2>Washing Machine</h2> </div>
+         <div class="p-price"><h3>Price:$540 USD</h3></div>
+        <div class="btn">  <button>Buy Now</button> </div>
+      </div>
+
+
+
+      <div class="card">
+             <div class="card-image"><img src="./images/ac.jpg"></div>
+         <div> <h2>Air Conditioner</h2> </div>
+         <div class="p-price"><h3>Price:$720 USD</h3></div>
+        <div class="btn">  <button>Buy Now</button> </div>
+      </div>
+
+
+
+      <div class="card"> 
+        <div class="card-image"><img src="./images/mixer.jpg"></div>
+         <div> <h2>Mixer</h2> </div>
+         <div class="p-price"><h3>Price:$72 USD</h3></div>
+        <div class="btn">  <button>Buy Now</button> </div>
+      </div>
+
+
+      </div>
+   </div>
+   </section>
+    <!-- produts ends -->
+   <!-- service section starts -->
+    <section id="service">
+          <div class="service">
+            <h1>SERVICES</h1>
+          <div class="p-list">
+            <div class="list">
+          <div class="list-img">
+            <img src="./images/airs.jpg">
+          </div>
+              <div class="title">
+                <h1>Air Fryer Services</h1>
+                <h2>3 Years Warranty</h2>
+                <h2>Free Recipe Booklet Included</h2>
+                 <h2>    Free Demo Available</h2>
+              </div>
+              <div class="price">
+              
+                <div class="btn"><button>Book Now</button></div>
+              </div>
+              </div>
+
+                      <div class="list">
+                       <div class="list-img">
+                     <img src="./images/washings.jpg">
+                      </div>
+              <div class="title">
+                <h1>Washing Machine  Services</h1>
+                 <h2>5 Years Motor Warranty</h2>
+                 <h2>Free Installation & Setup</h2>
+                 <h2>Free Demo + Usage Training</h2>
+                   
+              </div>
+              <div class="price">
+                
+                <button>Book Now</button>
+              </div>
+          </div>
+
+            <div class="list">
+          <div class="list-img">
+            <img src="./images/acs.jpg">
+          </div>
+              <div class="title">
+                <h1>Air Conditioner Services</h1>
+                 <h2>10 Years Compressor Warranty</h2>
+                 <h2>Free AC Installation + Stabilizer</h2>
+                 <h2>Free 3 Services in First Year</h2>
+              </div>
+              <div class="price">
+               
+                <button>Book Now</button>
+             </div>
+                </div>
+            
+
+
+             <div class="list">
+             <div class="list-img">
+            <img src="./images/mixers.jpg">
+          </div>
+              <div class="title">
+                <h1>Mixer Services</h1>
+                 <h2>2 Years Product Warranty</h2>
+                 <h2>Extra Jar Set Included</h2>
+                 <h2>Free Home Delivery</h2>
+              </div>
+              <div class="price">
+               
+              
+                <button>Book Now</button>
+              </div>
+          </div>
+            </div>
+            
+          </div>
+
+</section>
+
+   
+   <!-- service section ends -->
+ <section id="contact">
+      <div class="contact">
+      <div class="first">
+        <p><b>AppliMate</b></p>
+         <p>AppliMate</p>
+      <p>  Home Appliances, Kozhikode 673524</p> 
+       <p>Phone : +91 12345678</p>  
+       <p>  email : AppliMate.appliances@gmail.com
+             </p></div>
+              <div class="links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li>➤ <a href="index.html">Home</a></li>
+          <li>➤ <a href="#about">About</a></li>
+          <li>➤ <a href="#product">Product</a></li>
+          <li>➤ <a href="#service">Service</a></li>
+        </ul>
+      </div>
+      <div class="forms">
+        <h4>Contact Us</h4>
+        <form>
+          <input type="text" placeholder="Name">
+        <textarea placeholder="message"></textarea><br>
+        <input type="email" placeholder="Enter a valid email address">
+        <input type="text" class="captcha" value="vEKj9" readonly>
+          <input type="text" placeholder="Enter Captcha"><br>
+            <button type="submit">Send Message</button>
+
+
+        </form>
+      </div>
+      
+    </div>
+    </section>
+</body>
+ <footer class="footer">
+  <p>&copy; 2025 AppliMate. All rights reserved.</p>
+</footer>
+
+</html>
